@@ -20,9 +20,11 @@ transition: transform 0.25s ease-out;
 }
 .monster-list{
     width: 85vw;
-    margin: 0 auto;
+    margin: 40px;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     grid-gap: 20px;
+    border: 5px;
+   
 
 }
