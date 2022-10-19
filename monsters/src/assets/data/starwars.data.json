@@ -1,0 +1,42 @@
+[
+    {
+      "nickname": "Space Jesus",
+      "name": "Obi-Wan Kenobi",
+      "Força": "200",
+      "Destreza": "150",
+      "Magia": "190",
+      "Defeza": "180",
+      "Inteligência": "200"
+    },
+    {
+      "nickname": "Kids Killer",
+      "name": "Anakin Skywalker",
+      "Força": "200",
+      "Destreza": "150",
+      "Magia": "200",
+      "Defeza": "180",
+      "Inteligência": "0"
+    },
+    {
+      "nickame": "His sisters boyfriend",
+      "name": "Luke Skywalker",
+      "Força": "150",
+      "Destreza": "120",
+      "Magia": "90",
+      "Defeza": "180",
+      "Inteligência": "150"
+    },
+    {
+      "nickname": "Drama Queen",
+      "name": "Han Solo",
+      "Força": "190",
+      "Destreza": "150",
+      "Magia": "50",
+      "Defeza": "190",
+      "Inteligência": "200"
+    }
+    
+    
+  
+]
+
