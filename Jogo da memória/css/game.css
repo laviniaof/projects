@@ -1,0 +1,44 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr );
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 100px;
+
+}
+
+.card{
+    width: 100%;
+    background-color: #333;
+    aspect-ratio: 3/4;
+    border-radius: 5px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+}
+
+.face{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.front{
+    transform: rotateY(180deg);
+}
+
+.back{
+    background-image: url('../img/front.jpeg');
+    background-size: cover;
+    background-position: center;
+    backface-visibility: hidden;
+}   
+
+.card:hover{
+    transform: rotateY(180deg);
+}
