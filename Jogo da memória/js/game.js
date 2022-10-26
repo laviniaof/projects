@@ -22,6 +22,13 @@ const createElement = (tag, className) => {
 let firstCard = '';
 let secondCard = '';
 
+const checkEndGame = () => {
+    const disabledCards = document.querySelectorAll('.disabled-card');
+
+    if (disabledCards.length === 20) {
+        alert('Parabéns, você venceu!');
+    }
+}
 
 const checkCards = () => {
     const firstCharacter = firstCard.getAttribute('data-character');
@@ -29,7 +36,13 @@ const checkCards = () => {
 
     if (firstCharacter === secondCharacter) {
 
+        firstCard.firstChild.classList.add('disabled-card');
+        secondCard.firstChild.classList.add('disabled-card');
 
+        firstCard = '';
+        secondCard = '';
+
+        checkEndGame ();
 
     }else {
       setTimeout(() => {
@@ -53,19 +66,17 @@ const revealCard = ({target}) => {
 
     if (firstCard === '') {
 
-        target.parentNode.className.includes('reveal-card');
+        target.parentNode.classList.add('reveal-card');
         firstCard = target.parentNode;
 
     } else if (secondCard === '') {
        
-        target.parentNode.className.includes('reveal-card');
+        target.parentNode.classList.add('reveal-card');
         secondCard = target.parentNode;
 
+        checkCards();
+
     }
-
-
-
-    target.parentNode.classList.add('reveal-card');
 
 }
 
@@ -89,7 +100,7 @@ const loadGame = () => {
 
     const duplicateCharacters = [ ...characters, ...characters ];
 
-    const shuffledArray = duplicateCharacters.sort( () => Math.random() - 0.5 );
+    const shuffledArray = duplicateCharacters.sort(() => Math.random() - 0.5);
 
     shuffledArray.forEach((character) => {
 

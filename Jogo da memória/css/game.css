@@ -26,6 +26,7 @@
     background-position: center;
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
+    transition: all 400ms ease;
 }
 
 .front{
@@ -44,3 +45,7 @@
 
 }
 
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0,5;
+}
