@@ -1,4 +1,6 @@
 const grid = document.querySelector('.grid');
+const spanPlayer = document.querySelector('.player');
+const timer = document.querySelector('.timer');
 
 const characters = [
     'aragorn',
@@ -26,6 +28,7 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
 
     if (disabledCards.length === 20) {
+        clearInterval(this.loop);
         alert('Parabéns, você venceu!');
     }
 }
@@ -110,4 +113,17 @@ const loadGame = () => {
     });
 }
 
-loadGame();
+const startTimer = () => {
+
+   this.loop = setInterval(() => {
+        const currentTime = +timer.innerHTML;
+        timer.innerHTML = currentTime + 1;
+    }, 1000 );
+
+}
+
+window.onload = () => {
+    spanPlayer.innerHTML = localStorage.getItem('player');
+    startTimer();
+    loadGame();
+}
